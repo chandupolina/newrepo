@@ -1,5 +1,11 @@
 pipeline{
-    agent any
+    agent {
+        label 'java-slave'
+    }
+    tools {
+        jdk 'jdk-21'
+    }
+        
     stages{
         stage ('BUILD'){
             steps{
